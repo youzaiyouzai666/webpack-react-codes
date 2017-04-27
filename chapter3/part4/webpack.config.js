@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-var HtmlwebpackPlugin = require('html-webpack-plugin');
+var HtmlwebpackPlugin = require('html-webpack-plugin');//生成 html路径问题
 
 var ROOT_PATH = path.resolve(__dirname);
 var BUILD_PATH = path.resolve(ROOT_PATH, 'build');

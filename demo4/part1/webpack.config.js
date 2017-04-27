@@ -28,16 +28,28 @@ module.exports= {
     root: APP_PATH
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx?$/,
+        loaders: ['eslint'],
+        include: APP_PATH
+      }
+    ],
     loaders: [
       {
         test: /\.jsx?$/,
         loaders: ['babel'],
         include: APP_PATH
-      }    ]
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css', 'sass']
+      }
+    ]
   },
   plugins: [
     new HtmlwebpackPlugin({
-      title: 'My first react app'
+      title: 'Deskmark app'
     })
   ]
 }
